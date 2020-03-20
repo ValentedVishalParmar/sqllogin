@@ -19,11 +19,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("SHREE HARI INFOTECH"),
         centerTitle: true,
+        
       ),
       body: Center(
+        child:Container(
+        padding: EdgeInsets.all(20),
+        
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+       
           children: <Widget>[
+            
             /* new Hero(
                       tag: 'hero',
                     child: Padding(
@@ -38,9 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),*/
             Image.asset('assets/shilogo1.png',
                 width: 200, height: 200, fit: BoxFit.fill),
-            Divider(
-              height: 24.0,
-            ),
+          Spacer(flex: 2),
             //Image.asset('assets/shilogo1.png'),
             TextField(
               keyboardType: TextInputType.emailAddress,
@@ -57,9 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   hintStyle: TextStyle(
                       fontWeight: FontWeight.w300, color: Colors.grey)),
             ),
-            Divider(
-              height: 24.0,
-            ),
+           //  SizedBox(height: 10),
+             Spacer(flex: 2),
             TextField(
               keyboardType: TextInputType.text,
               controller: passController,
@@ -76,9 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   hintStyle: TextStyle(
                       fontWeight: FontWeight.w300, color: Colors.grey)),
             ),
-            Divider(
-              height: 24.0,
-            ),
+            Spacer(flex: 1),
             RaisedButton(
               onPressed: () async {
                 var settings = new ConnectionSettings(
@@ -110,9 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
             ),
-            Divider(
-              height: 24.0,
-            ),
+            Spacer(flex: 1),
             new Container(
                 child: RaisedButton(
                 
@@ -126,6 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),),
           ],
+        ),
         ),
       ),
     );
